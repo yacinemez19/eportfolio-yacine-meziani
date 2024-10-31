@@ -18,9 +18,21 @@ const PDF = "/cv-20240219.pdf";
     <article class="text-justify">
       <Fragment set:html={about.compiledContent()} />
     </article>
+    <style>
+      /* Container pour centrer la vidéo */
+      .video-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0; /* Espace autour de la vidéo */
+      }
+  </style>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/b1kg4tqyDCQ?si=s-nTs4mgYQD34Abl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   </AccordionLayout>
 
-  <AccordionLayout title={"Work"} icon={"carbon:construction"}>
+  <AccordionLayout title={"Engineering course"} icon={"carbon:education"}>
     {
       works.map((item) => {
         return (
@@ -38,7 +50,7 @@ const PDF = "/cv-20240219.pdf";
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Studies"} icon={"carbon:education"}>
+  <AccordionLayout title={"International Mobility"} icon={"carbon:plane"}>
     {
       studies.map((item) => {
         return (
@@ -55,7 +67,7 @@ const PDF = "/cv-20240219.pdf";
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Projects"} icon={"carbon:tools"}>
+  <AccordionLayout title={"Sustainability & Civic Engagement"} icon={"carbon:friendship"}>
     {
       projects.map((item) => {
         return (
@@ -72,7 +84,7 @@ const PDF = "/cv-20240219.pdf";
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Certifications"} icon={"carbon:certificate"}>
+  <AccordionLayout title={"Sport & other activities"} icon={"carbon:basketball"}>
     {
       certificates.map((item) => {
         return (
@@ -89,16 +101,17 @@ const PDF = "/cv-20240219.pdf";
     }
   </AccordionLayout>
 
-  <AccordionLayout title={"Blogs"} icon={"carbon:pen"}>
+  <AccordionLayout title={"Career Development"} icon={"carbon:construction"}>
     {
-      blogs.map((item) => {
+      certificates.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
             timeframe={item.frontmatter.date}
             description={item.compiledContent()}
+            tags={item.frontmatter.tags}
             url={item.frontmatter.url}
-            url_name={item.frontmatter.url_name}
+            url_name={"View Certificate"}
           />
         );
       })
