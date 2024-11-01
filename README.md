@@ -1,6 +1,6 @@
 # Astro-CV-Esquelete
 
-Astro-CV-Esquelete is a free, easy-to-use CV template with a clean design. Just fill in your details and you're ready to go!
+This is my e-portfolio from the template : Astro-CV-Esquelete
 
 ## Project Structure
 
