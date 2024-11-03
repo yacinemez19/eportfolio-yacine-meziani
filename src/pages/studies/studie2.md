@@ -1,8 +1,8 @@
 ---
 title: Advanced SWAT Tactics and Leadership Training
-location: FBI Academy
+location: La Prépa des INP Toulouse
 url: http://ni.sb/mehanad
 institute: FBI Academy
-date: 1975-1980
-tags: ["Conflict Resolution", "Strategic Planning", "Risk Assessment", "Firearms Training", "Emergency Response"]
+date: 2022-2024
+tags: ["Mathematics", "Physics", "Computer Science", "English"]
 ---
