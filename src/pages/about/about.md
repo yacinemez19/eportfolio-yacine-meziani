@@ -4,7 +4,9 @@ name: "Yacine  Meziani"
 designation: "Computer Science Engeneering Student"
 location: Toulouse, 31000
 pronouns: "he/him"
-website: "http://tafutza.hn/kos"
+website: "http://https://eportfolio-yacine-meziani.vercel.app"
 ---
 
-Highly skilled and experienced law enforcement professional with over two decades of service in various specialized units. Adept at conducting complex investigations, coordinating tactical operations, and providing leadership in high-pressure situations. Known for exceptional problem-solving abilities, strategic thinking, and dedication to upholding the law. Seeking opportunities to leverage expertise in a challenging environment where I can continue to make a meaningful impact.
+Hello! I’m Yacine Meziani, an Algerian computer science and engineering student currently studying in France. Since I was a child, I've been captivated by computers and how they work; pursuing a career in this field has always been my goal. At 18, I moved to France to enroll in an intensive preparatory program for top engineering schools, aiming to deepen my technical knowledge and ultimately become an engineer.
+
+Today, I’m especially fascinated by artificial intelligence, particularly the rapid evolution of language models (LLMs). I’m drawn to applied AI and data science, and I’m considering the possibility of pursuing a PhD in this exciting field.
