@@ -111,6 +111,50 @@ const PDF = "/cv-20240219.pdf";
   <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/fKU967XeXF8?si=Sgmlp9hNM58R28-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
+
+  <div class="flex justify-center w-full flex-wrap gap-8"> <!-- Ajout de flex-wrap et gap -->
+    <div
+      class="card card-compact card-bordered border-[oklch(var(--s))] w-80 md:w-96 lg:w-96 hover:shadow-lg transition-all"
+    >
+      <figure>
+        <object data={PDF} type="application/pdf" width="100%"></object>
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">English resume</h2>
+        <p>View and download my resume by clicking on the button below</p>
+        <div class="card-actions justify-end">
+          <a target="_blank" href={PDF}>
+            <button class="btn btn-outline">
+              <p>Download resume</p>
+              <Icon name="carbon:document-pdf" class="w-6 h-6 ml-1" />
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class="card card-compact card-bordered border-[oklch(var(--s))] w-80 md:w-96 lg:w-96 hover:shadow-lg transition-all"
+    >
+      <figure>
+        <object data={PDF} type="application/pdf" width="100%"></object>
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">French resume</h2>
+        <p>View and download my resume by clicking on the button below</p>
+        <div class="card-actions justify-end">
+          <a target="_blank" href={PDF}>
+            <button class="btn btn-outline">
+              <p>Download resume</p>
+              <Icon name="carbon:document-pdf" class="w-6 h-6 ml-1" />
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
     
   </AccordionLayout>
 
