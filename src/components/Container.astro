@@ -9,7 +9,8 @@ const civic = await Astro.glob("../pages/civic/*.md");
 const studies = await Astro.glob("../pages/studies/*.md");
 const mobility = await Astro.glob("../pages/mobility/*.md");
 const contact = await Astro.glob("../pages/contact/*.md");
-const PDF = "/cv-20240219.pdf";
+const PDF = "/cv-fr.pdf";
+const PDFEN = "/cv-en.pdf"
 ---
 
 <div class="join join-vertical gap-1">
@@ -86,19 +87,7 @@ const PDF = "/cv-20240219.pdf";
   </AccordionLayout>
 
   <AccordionLayout title={"Career Development"} icon={"carbon:construction"}>
-    <div class="flex flex-wrap content-around gap-4 justify-center">
-      {
-        contact.map((item) => {
-          return (
-            <ContactCard
-              url={item.frontmatter.url}
-              url_name={item.frontmatter.title}
-              icon={item.frontmatter.icon}
-            />
-          );
-        })
-      }
-    </div>
+    
     <style>
       /* Container pour centrer la vidéo */
       .video-container {
@@ -117,13 +106,13 @@ const PDF = "/cv-20240219.pdf";
       class="card card-compact card-bordered border-[oklch(var(--s))] w-80 md:w-96 lg:w-96 hover:shadow-lg transition-all"
     >
       <figure>
-        <object data={PDF} type="application/pdf" width="100%"></object>
+        <object data={PDFEN} type="application/pdf" width="100%"></object>
       </figure>
       <div class="card-body">
         <h2 class="card-title">English resume</h2>
         <p>View and download my resume by clicking on the button below</p>
         <div class="card-actions justify-end">
-          <a target="_blank" href={PDF}>
+          <a target="_blank" href={PDFEN}>
             <button class="btn btn-outline">
               <p>Download resume</p>
               <Icon name="carbon:document-pdf" class="w-6 h-6 ml-1" />
@@ -153,6 +142,20 @@ const PDF = "/cv-20240219.pdf";
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="flex flex-wrap content-around gap-4 justify-center">
+    {
+      contact.map((item) => {
+        return (
+          <ContactCard
+            url={item.frontmatter.url}
+            url_name={item.frontmatter.title}
+            icon={item.frontmatter.icon}
+          />
+        );
+      })
+    }
   </div>
 
     
