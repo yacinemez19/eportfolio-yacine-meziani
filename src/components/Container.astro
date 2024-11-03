@@ -7,7 +7,7 @@ import ContactCard from "./ContactCard.astro";
 const activities = await Astro.glob("../pages/activities/*.md");
 const civic = await Astro.glob("../pages/civic/*.md");
 const studies = await Astro.glob("../pages/studies/*.md");
-const certificates = await Astro.glob("../pages/certificates/*.md");
+const career = await Astro.glob("../pages/career/*.md");
 const mobility = await Astro.glob("../pages/mobility/*.md");
 const contact = await Astro.glob("../pages/contact/*.md");
 const PDF = "/cv-20240219.pdf";
@@ -18,18 +18,7 @@ const PDF = "/cv-20240219.pdf";
     <article class="text-justify">
       <Fragment set:html={about.compiledContent()} />
     </article>
-    <style>
-      /* Container pour centrer la vidéo */
-      .video-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 20px 0; /* Espace autour de la vidéo */
-      }
-  </style>
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fKU967XeXF8?si=dtn-owVN2Dtyldva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+
   </AccordionLayout>
 
   <AccordionLayout title={"Engineering course"} icon={"carbon:education"}>
@@ -97,7 +86,7 @@ const PDF = "/cv-20240219.pdf";
 
   <AccordionLayout title={"Career Development"} icon={"carbon:construction"}>
     {
-      certificates.map((item) => {
+      career.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
@@ -110,9 +99,18 @@ const PDF = "/cv-20240219.pdf";
         );
       })
     }
-  </AccordionLayout>
-
-  <AccordionLayout title={"Files"} icon={"carbon:volume-file-storage"}>
+    <style>
+      /* Container pour centrer la vidéo */
+      .video-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 20px 0; /* Espace autour de la vidéo */
+                }
+    </style>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/fKU967XeXF8?si=dtn-owVN2Dtyldva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div class="flex justify-center w-full flex-wrap gap-8"> <!-- Ajout de flex-wrap et gap -->
       <div
         class="card card-compact card-bordered border-[oklch(var(--s))] w-80 md:w-96 lg:w-96 hover:shadow-lg transition-all"
@@ -153,6 +151,19 @@ const PDF = "/cv-20240219.pdf";
           </div>
         </div>
       </div>
+    </div>
+    <div class="flex flex-wrap content-around gap-4 justify-center">
+      {
+        contact.map((item) => {
+          return (
+            <ContactCard
+              url={item.frontmatter.url}
+              url_name={item.frontmatter.title}
+              icon={item.frontmatter.icon}
+            />
+          );
+        })
+      }
     </div>
   </AccordionLayout>
 
