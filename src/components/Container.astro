@@ -5,7 +5,6 @@ import * as about from "../pages/about/about.md";
 import Card from "./Card.astro";
 import ContactCard from "./ContactCard.astro";
 const activities = await Astro.glob("../pages/activities/*.md");
-const civic = await Astro.glob("../pages/civic/*.md");
 const studies = await Astro.glob("../pages/studies/*.md");
 const mobility = await Astro.glob("../pages/mobility/*.md");
 const contact = await Astro.glob("../pages/contact/*.md");
@@ -46,7 +45,6 @@ const PDFEN = "/cv-en.pdf"
           <Card
             title={item.frontmatter.title}
             timeframe={item.frontmatter.date}
-            tags={item.frontmatter.tags}
           />
         );
       })
