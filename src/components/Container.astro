@@ -45,6 +45,7 @@ const PDFEN = "/cv-en.pdf"
           <Card
             title={item.frontmatter.title}
             timeframe={item.frontmatter.date}
+            description={item.compiledContent()}
           />
         );
       })
@@ -124,7 +125,7 @@ const PDFEN = "/cv-en.pdf"
       </div>
     </div>
   </div>
-
+  <br>
   <div class="flex flex-wrap content-around gap-4 justify-center">
     {
       contact.map((item) => {
