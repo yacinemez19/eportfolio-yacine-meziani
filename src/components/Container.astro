@@ -4,11 +4,11 @@ import AccordionLayout from "../layouts/AccordionLayout.astro";
 import * as about from "../pages/about/about.md";
 import Card from "./Card.astro";
 import ContactCard from "./ContactCard.astro";
-const works = await Astro.glob("../pages/works/*.md");
+const activities = await Astro.glob("../pages/activities/*.md");
 const projects = await Astro.glob("../pages/projects/*.md");
 const studies = await Astro.glob("../pages/studies/*.md");
 const certificates = await Astro.glob("../pages/certificates/*.md");
-const blogs = await Astro.glob("../pages/blogs/*.md");
+const mobility = await Astro.glob("../pages/mobility/*.md");
 const contact = await Astro.glob("../pages/contact/*.md");
 const PDF = "/cv-20240219.pdf";
 ---
@@ -34,7 +34,7 @@ const PDF = "/cv-20240219.pdf";
 
   <AccordionLayout title={"Engineering course"} icon={"carbon:education"}>
     {
-      works.map((item) => {
+      studies.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
@@ -52,7 +52,7 @@ const PDF = "/cv-20240219.pdf";
 
   <AccordionLayout title={"International Mobility"} icon={"carbon:plane"}>
     {
-      studies.map((item) => {
+      mobility.map((item) => {
         return (
           <Card
             title={item.frontmatter.title}
@@ -86,15 +86,11 @@ const PDF = "/cv-20240219.pdf";
 
   <AccordionLayout title={"Sport & other activities"} icon={"carbon:basketball"}>
     {
-      certificates.map((item) => {
+      activities.map((item) => {
         return (
           <Card
-            title={item.frontmatter.title}
-            timeframe={item.frontmatter.date}
+            title={item.frontmatter.title}          
             description={item.compiledContent()}
-            tags={item.frontmatter.tags}
-            url={item.frontmatter.url}
-            url_name={"View Certificate"}
           />
         );
       })
