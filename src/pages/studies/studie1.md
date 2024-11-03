@@ -1,5 +1,5 @@
 ---
-title: Bachelor of Science in Criminal Justice
+title: Engeneering Degree in Computer Science
 location: ENSEEIHT
 url: http://foeberoz.gm/kuj
 institute: ENSEEIHT

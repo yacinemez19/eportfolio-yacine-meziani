@@ -86,7 +86,20 @@ const PDF = "/cv-20240219.pdf";
   </AccordionLayout>
 
   <AccordionLayout title={"Career Development"} icon={"carbon:construction"}>
-    
+    <div class="flex flex-wrap content-around gap-4 justify-center">
+      {
+        contact.map((item) => {
+          return (
+            <ContactCard
+              url={item.frontmatter.url}
+              url_name={item.frontmatter.title}
+              icon={item.frontmatter.icon}
+            />
+          );
+        })
+      }
+    </div>
+ 
   </AccordionLayout>
 
 </div>

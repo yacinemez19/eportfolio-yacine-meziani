@@ -1,5 +1,5 @@
 ---
-title: Advanced SWAT Tactics and Leadership Training
+title: Intensive undergraduate studies to prepare for admission to French Engineering Schools
 location: La Prépa des INP Toulouse
 url: http://ni.sb/mehanad
 institute: FBI Academy
