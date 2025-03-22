@@ -1,6 +1,4 @@
-# Astro-CV-Esquelete
-
-This is my e-portfolio from the template : Astro-CV-Esquelete
+I used the template : Astro-CV-Esquelete
 
 ## Project Structure
 
